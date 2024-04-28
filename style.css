@@ -43,6 +43,9 @@ html,body{
     width: 350px;
     font-size: 20px;
 }
+.header_right{
+    display: flex;
+}
 .header_right a{
     padding: 10px 20px;
     color: #2a55e5;
@@ -58,6 +61,83 @@ html,body{
 /* main{
     background-color: #000;
 } */
+
+/* .loginBtn_container{
+    background-color: white;
+    padding: 6px 35px;
+    font-size: 15px;
+    border-radius: 1px;
+    margin:0px 10px;
+    position: relative;
+} */
+/* .loginBtn_container a{
+    color: #2874f0;
+    font-weight: 550;
+    text-decoration: none;
+} */
+.login_menu{
+    position: absolute;
+    top:40px;
+    height: 400px;
+    width: 100%;
+    width: 250px;
+    background-color: transparent;
+    margin-left: -40px;
+    transform: translateX(-25%);
+    display: none;
+    padding-top: 15px;
+    z-index:12; /*** change done****/
+}
+.login_menu::before{
+    position: absolute;
+    content: "";
+    margin-left: 110px;
+    top:1px;
+    border-top:0px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+}
+.loginBtn_container:hover .login_menu{
+    display: block;
+}
+.login_menu_list{
+    height: 100%;
+    max-width: 100%;
+    background-color: white;
+    box-shadow: -5px -0px 5px rgba(0,0,0,0.1),
+    5px 5px 5px rgba(0,0,0,0.1);
+    padding: 5px 20px;
+    font-size: 15px;
+    
+}
+.login_menu_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.login_menu_top a:hover{
+    text-decoration: underline;
+}
+.menu_nav_link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+.menu_nav_link a{
+    padding-top: 10px;
+    font-size: 14px;
+    display: flex;
+}
+.menu_nav_link a p{
+    padding-left: 10px;
+    color:#474545;
+    font-weight: 500;
+}
+.menu_nav_icon{
+    width: 15px;
+}
 /********** Product***********/
 
 .product-section{
@@ -203,8 +283,6 @@ html,body{
 .bestofElectronic_brand{
     color:rgb(143, 136, 136);
 }
-
-
 .bestofElctronic_product_item{
     display: flex;
     overflow: hidden;
